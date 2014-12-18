@@ -15,12 +15,8 @@ namespace :brew do
 
   def brew_outdated?
     `brew update`
-    outdated_output = `brew outdated`
-    unless outdated_output == ''
-      puts 'Found something for brew to upgrade.'
-      # TODO: parse output so that packages being upgraded can be printed.
-      puts outdated_output
-    end
-    outdated_output != ''
+    output = `brew outdated`
+    puts "Found something for brew to upgrade: #{output}" unless output == ''
+    output != ''
   end
 end
