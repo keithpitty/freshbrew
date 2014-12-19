@@ -9,7 +9,7 @@ Recommended to be used via a shell script and a cron job as follows.
 
 **Shell script** (e.g. `freshbrew.sh`):
 
-```
+```sh
 #!/bin/bash
 . $HOME/.bashrc
 cd path/to/freshbrew
