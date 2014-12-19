@@ -1,7 +1,7 @@
 freshbrew
 =========
 
-A simple rake task to keep homebrew up to date.
+A simple rake task to keep [homebrew](https://github.com/Homebrew/homebrew) up to date.
 
 **Usage:** `rake brew:refresh`
 
