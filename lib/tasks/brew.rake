@@ -19,6 +19,6 @@ namespace :brew do
   end
 
   def time
-    Time.now.strftime('%I:%M%p')
+    Time.now.strftime('%F %I:%M%p')
   end
 end
