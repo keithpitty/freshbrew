@@ -1,7 +1,7 @@
 require 'rake'
 
 namespace :brew do
-  task :maintain do
+  task :refresh do
     puts "#{time}: Checking if any brew upgrades are required ..."
     if brew_outdated?
       `brew upgrade && brew cleanup`
