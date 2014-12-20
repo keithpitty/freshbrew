@@ -14,7 +14,7 @@ namespace :brew do
   def brew_outdated?
     `brew update`
     output = `brew outdated`
-    puts "#{time}: About to upgrade: #{output}" unless output == ''
+    puts "#{time}: *** Upgrading: #{output}" unless output == ''
     output != ''
   end
 
