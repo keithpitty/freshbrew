@@ -4,7 +4,7 @@ namespace :brew do
   task :refresh do
     puts "#{time}: Checking if any brew upgrades are required ..."
     if brew_outdated?
-      puts `brew upgrade`
+      puts `brew upgrade -all`
       puts "#{time}: Finished upgrading."
     else
       puts "#{time}: Nothing for brew to upgrade."
