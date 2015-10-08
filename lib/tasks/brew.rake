@@ -13,12 +13,15 @@ namespace :brew do
 
   def brew_outdated?
     `brew update`
-    output = `brew outdated`
-    puts "#{time}: *** Outdated packages: #{output}" unless output == ''
-    output != ''
+    puts "#{time}: *** Outdated packages: #{outdated_packages}" unless outdated_packages == ''
+    outdated_packages != ''
   end
 
   def time
     Time.now.strftime('%F %I:%M%p')
+  end
+
+  def outdated_packages
+    @outdated_packages ||= `brew outdated`.split(/\s/).join(', ')
   end
 end
